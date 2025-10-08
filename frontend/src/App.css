@@ -1,0 +1,112 @@
+.done {
+  text-decoration: line-through;
+  color: gray;
+}
+* {
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: azure;
+}
+.title {
+  color: darkcyan;
+  padding: 10px 8px;
+  text-align: center;
+}
+.enter-task,
+.edit-input {
+  padding: 6px;
+  font-size: 18px;
+}
+.empty {
+  text-align: center;
+  color: darkcyan;
+}
+
+.container {
+  padding: 20px 40px 30px 40px;
+  box-shadow: 2px 2px 4px rgb(82, 82, 82);
+  background-color: rgb(198, 214, 170);
+}
+.container:hover {
+  box-shadow: 4px 4px 6px rgb(66, 65, 65);
+}
+.input-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.task {
+  padding: 12px 6px;
+  text-align: center;
+  background-color: rgb(252, 239, 214);
+  box-shadow: 2px 2px 4px rgb(101, 101, 101);
+  transition: all ease 0.1s;
+  border-radius: 8px;
+}
+.task:hover {
+  box-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+.handle-buttons button,
+.add,
+.save-btn,
+.cancel-btn {
+  border: none;
+  margin: 4px;
+  padding: 8px 10px;
+  font-size: 16px;
+  transition: all ease 0.09s;
+  border-radius: 5px;
+  color: white;
+}
+.handle-buttons button:hover {
+  cursor: pointer;
+}
+.delete-btn,
+.cancel-btn {
+  background-color: rgb(254, 87, 87);
+}
+.edit-btn,
+.save-btn {
+  background-color: rgb(94, 200, 113);
+}
+.complete-btn {
+  background-color: rgb(81, 141, 252);
+}
+.completed-btn {
+  background-color: rgb(57, 182, 254);
+  color: white;
+}
+.add {
+  background-color: rgb(57, 182, 254);
+}
+
+.delete-btn:hover,
+.delete-btn:active,
+.cancel-btn:hover,
+.cancel-btn:active {
+  background-color: rgb(223, 62, 62);
+  color: white;
+}
+.edit-btn:hover,
+.edit-btn:active,
+.save-btn:hover,
+.save-btn:active {
+  background-color: rgb(45, 187, 71);
+  color: white;
+}
+.complete-btn:hover,
+.complete-btn:active {
+  background-color: rgb(37, 104, 228);
+  color: white;
+}
+.add:hover,
+.add:active {
+  background-color: rgb(25, 181, 220);
+  color: white;
+}
