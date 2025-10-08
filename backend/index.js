@@ -55,6 +55,4 @@ app.delete("/api/tasks/:id", async (req, res) => {
   res.json({ message: "task deleted" });
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running at port ${PORT}`);
-});
+module.exports = app;
