@@ -14,6 +14,10 @@ const app = express();
 app.use(cors(corsOptions));
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("backend is running fine");
+});
+
 mongoose
   .connect(process.env.MONGO_URL)
   // .connect("mongodb://localhost:27017/taskDB")
