@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000//tasks`)
+      .get(`http://localhost:8000/tasks`)
       .then((res) => {
         if (Array.isArray(res.data)) {
           setTaskList(res.data);
