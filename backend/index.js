@@ -4,14 +4,24 @@ const cors = require("cors");
 const dotEnv = require("dotenv").config();
 
 const PORT = 8000;
-const corsOptions = {
-  origin: "https://task-list-frontend-khaki.vercel.app/",
-  optionSuccessStatus: 200,
-};
+const allowedOrigins = ["https://task-list-frontend-khaki.vercel.app/"];
 
 const app = express();
 
-app.use(cors(corsOptions));
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.indexOf(origin) === -1) {
+        const msg =
+          "The CORS policy for this site does not allow access from the specified Origin.";
+        return callback(new Error(msg), false);
+      }
+      return callback(null, true);
+    },
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 app.get("/", (req, res) => {
@@ -59,4 +69,8 @@ app.delete("/api/tasks/:id", async (req, res) => {
   res.json({ message: "task deleted" });
 });
 
-module.exports = app;
+app.listen(PORT, () => {
+  console.log(`server is running on port ${PORT}`);
+});
+
+// module.exports = app;
