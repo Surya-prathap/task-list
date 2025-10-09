@@ -4,7 +4,7 @@ const cors = require("cors");
 const dotEnv = require("dotenv").config();
 
 const PORT = 8000;
-const allowedOrigins = ["https://task-list-frontend-khaki.vercel.app/"];
+const allowedOrigins = ["https://task-list-frontend-khaki.vercel.app"];
 
 const app = express();
 
